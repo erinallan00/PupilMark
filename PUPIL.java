@@ -1,33 +1,11 @@
-
-/**
- * Write a description of class PUPIL here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class PUPIL
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private String fName;
+    private String sName;
+    private int TopMark;
 
-    /**
-     * Constructor for objects of class PUPIL
-     */
     public PUPIL()
     {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+        
+    } 
 }
