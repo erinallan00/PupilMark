@@ -23,7 +23,7 @@ public class SCHOOL
        System.out.println("School top mark update");
        System.out.println("** Preparing to read data file.");
        String[] dataRows = scoreFile.readCSVtable();
-       noOfPupils = dataRows.length - 1;
+       noOfPupils = dataRows.length;
        System.out.println("** " + noOfPupils + " rows read.\n\n");
     }
 
