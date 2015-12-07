@@ -6,11 +6,11 @@ public class PUPIL
 
     public PUPIL()
     {
-       fName = "";
-       sName = "";
-       TopMark = 0;
+        fName = "";
+        sName = "";
+        TopMark = 0;
     } 
-    
+
     public void readPupilDetails(String dataItems)
     {
         String[] rowItems = dataItems.split(",");
@@ -18,7 +18,7 @@ public class PUPIL
         sName = rowItems[1];
         TopMark = Integer.parseInt(rowItems[2]);
     }
-    
+
     public String writeDetails()
     {
         String pupilData = "";
@@ -28,5 +28,19 @@ public class PUPIL
         pupilData = pupilData.concat(",");
         pupilData = pupilData.concat(Integer.toString(TopMark));
         return pupilData;
+    }
+
+    public float getTopMark()
+    {
+        return TopMark;
+    }
+
+
+    public void displayDetails()
+    {
+        System.out.print("Pupil: " + fName + " " + sName);
+        System.out.print(",  Mark is ");
+        System.out.printf("%", TopMark);
+        System.out.println();
     }
 }
