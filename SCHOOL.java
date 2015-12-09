@@ -43,8 +43,8 @@ public class SCHOOL
         }
 
         //display results: position and the best (max) value
-        System.out.print("Highest Mark is:" + maxDataPosition + " , Pupil is:");
-        pupillist[maxDataPosition].displayTopMark();
+        System.out.print("Highest Mark is: " + maxDataPosition );
+        pupillist[maxDataPosition].displayDetails();
         System.out.println();
     }
 

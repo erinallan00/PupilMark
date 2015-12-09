@@ -39,8 +39,7 @@ public class PUPIL
     public void displayDetails()
     {
         System.out.print("Pupil: " + fName + " " + sName);
-        System.out.print(",  Mark is ");
-        System.out.printf("%", TopMark);
+        System.out.print(TopMark);
         System.out.println();
     }
 }
