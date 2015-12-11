@@ -8,6 +8,7 @@ public class SCHOOL
     public SCHOOL()
     {
         scoreFile = new FILEREADCSV();
+        FILEWRITECSV resultFile;
     }
 
     public void processPupils() throws IOException
@@ -35,15 +36,15 @@ public class SCHOOL
     public void countOKTopMark()
     {
        int maxDataPosition = 0;
-        for  (int i = 0; i < noOfPupils; i++) {
-            if (pupillist[i].getTopMark() < pupillist[maxDataPosition].getTopMark()) {
+        for  (int i = 1; i < noOfPupils; i++) {
+            if (pupillist[i].getTopMark() > pupillist[maxDataPosition].getTopMark()) {
                 // update the position of the best value
                 maxDataPosition = i;
             }
         }
 
         //display results: position and the best (max) value
-        System.out.print("Highest Mark is: " + maxDataPosition );
+        System.out.print("Highest Mark was found at position: " + maxDataPosition );
         pupillist[maxDataPosition].displayDetails();
         System.out.println();
     }

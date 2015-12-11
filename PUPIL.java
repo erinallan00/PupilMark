@@ -38,8 +38,8 @@ public class PUPIL
 
     public void displayDetails()
     {
-        System.out.print("Pupil: " + fName + " " + sName);
-        System.out.print(TopMark);
+        System.out.print(" The pupil achieving this mark was: " + fName + " " + sName);
+        System.out.print(" Their mark was: " + TopMark);
         System.out.println();
     }
 }
