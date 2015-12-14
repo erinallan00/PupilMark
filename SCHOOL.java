@@ -5,10 +5,10 @@ public class SCHOOL
     private PUPIL pupillist[];
     int noOfPupils;
     FILEREADCSV scoreFile;
+    FILEWRITECSV resultFile;
     public SCHOOL()
     {
         scoreFile = new FILEREADCSV();
-        FILEWRITECSV resultFile;
     }
 
     public void processPupils() throws IOException
@@ -33,9 +33,10 @@ public class SCHOOL
         }
     }
 
-    public void countOKTopMark()
+    public void countOKTopMark() throws IOException
     {
-       int maxDataPosition = 0;
+        String fileContent = "";
+        int maxDataPosition = 0;
         for  (int i = 1; i < noOfPupils; i++) {
             if (pupillist[i].getTopMark() > pupillist[maxDataPosition].getTopMark()) {
                 // update the position of the best value
@@ -47,6 +48,13 @@ public class SCHOOL
         System.out.print("Highest Mark was found at position: " + maxDataPosition );
         pupillist[maxDataPosition].displayDetails();
         System.out.println();
-    }
+        System.out.println("** File written and closed.");
+        fileContent = fileContent.concat(pupillist[maxDataPosition].writeDetails());
+        if (maxDataPosition>1)
+        {
+            fileContent = fileContent.concat("\n");
+            resultFile.writeCSVtable(fileContent);
+        }
 
-}
+    }
+} 
