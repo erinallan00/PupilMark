@@ -9,6 +9,7 @@ public class SCHOOL
     public SCHOOL()
     {
         scoreFile = new FILEREADCSV();
+        resultFile = new FILEWRITECSV();
     }
 
     public void processPupils() throws IOException
@@ -48,13 +49,8 @@ public class SCHOOL
         System.out.print("Highest Mark was found at position: " + maxDataPosition );
         pupillist[maxDataPosition].displayDetails();
         System.out.println();
-        System.out.println("** File written and closed.");
         fileContent = fileContent.concat(pupillist[maxDataPosition].writeDetails());
-        if (maxDataPosition>1)
-        {
-            fileContent = fileContent.concat("\n");
-            resultFile.writeCSVtable(fileContent);
-        }
-
+        resultFile.writeCSVtable(fileContent);
+        System.out.println("** File written and closed.");
     }
 } 
